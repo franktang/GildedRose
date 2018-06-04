@@ -1,12 +1,12 @@
 package com.jani;
 
-public class AgedItem implements Item {
+public class BackstageItem implements Item {
 
     public String name;
     public int sellIn;
     public int quality;
 
-    public AgedItem(String name, int sellIn, int quality) {
+    public BackstageItem(String name, int sellIn, int quality) {
         this.setName(name);
         this.setSellIn(sellIn);
         this.setQuality(quality);;
@@ -40,13 +40,37 @@ public class AgedItem implements Item {
 
     @Override
     public void updateQuality() {
-        if (this.quality < 50) {
-            this.quality += 1;
-        }
-        this.sellIn -=1;
+        if (this.getQuality() < 50)
+        {
+            this.setQuality(this.getQuality() + 1);
 
-        if (this.sellIn < 0 && this.quality < 50){
-            this.quality ++;
+
+            if (this.getSellIn() < 11)
+            {
+                if (this.getQuality() < 50)
+                {
+                    this.setQuality(this.getQuality() + 1);
+                }
+            }
+
+            if (this.getSellIn() < 6)
+            {
+                if (this.getQuality() < 50)
+                {
+                    this.setQuality(this.getQuality() + 1);
+                }
+            }
+
         }
+
+        this.setSellIn(this.getSellIn()-1);
+
+        if (this.getSellIn() < 0)
+        {
+            this.setQuality(this.getQuality() - this.getQuality());
+        }
+
     }
 }
+
+

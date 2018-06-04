@@ -71,50 +71,50 @@ public class GildedRoseTest {
 
     @Test
     public void should_return_21_given_a_Sulfuras_item_its_sellIn_is_0_quality_is_80() throws Exception {
-        Item item = new NormalItem("Sulfuras, Hand of Ragnaros", 0, 80);
+        Item item = new SulfurasItem("Sulfuras, Hand of Ragnaros", 0, 80);
         items = singletonList(item);
 
-        updateQuality();
+        updateQuality(1);
 
         assertEquals(80, item.getQuality());
     }
 
     @Test
     public void should_return_21_given_a_Backstage_Passes_item_its_sellIn_is_15_quality_is_20() throws Exception {
-        Item item = new NormalItem("Backstage passes to a TAFKAL80ETC concert", 15, 20);
+        Item item = new BackstageItem("Backstage passes to a TAFKAL80ETC concert", 15, 20);
         items = singletonList(item);
 
-        updateQuality();
+        updateQuality(1);
 
         assertEquals(21, item.getQuality());
     }
 
     @Test
     public void should_return_50_given_a_Backstage_Passes_item_its_sellIn_is_15_quality_is_50() throws Exception {
-        Item item = new NormalItem("Backstage passes to a TAFKAL80ETC concert", 15, 50);
+        Item item = new BackstageItem("Backstage passes to a TAFKAL80ETC concert", 15, 50);
         items = singletonList(item);
 
-        updateQuality();
+        updateQuality(1);
 
         assertEquals(50, item.getQuality());
     }
 
     @Test
     public void should_return_23_given_a_Backstage_Passes_item_its_sellIn_is_5_quality_is_20() throws Exception {
-        Item item = new NormalItem("Backstage passes to a TAFKAL80ETC concert", 5, 20);
+        Item item = new BackstageItem("Backstage passes to a TAFKAL80ETC concert", 5, 20);
         items = singletonList(item);
 
-        updateQuality();
+        updateQuality(1);
 
         assertEquals(23, item.getQuality());
     }
 
     @Test
     public void should_return_23_given_a_Backstage_Passes_item_its_sellIn_is_5_quality_is_49() throws Exception {
-        Item item = new NormalItem("Backstage passes to a TAFKAL80ETC concert", 2, 49);
+        Item item = new BackstageItem("Backstage passes to a TAFKAL80ETC concert", 2, 49);
         items = singletonList(item);
 
-        updateQuality();
+        updateQuality(1);
 
         assertEquals(50, item.getQuality());
     }
@@ -122,30 +122,30 @@ public class GildedRoseTest {
 
     @Test
     public void should_return_22_given_a_Backstage_Passes_item_its_sellIn_is_10_quality_is_20() throws Exception {
-        Item item = new NormalItem("Backstage passes to a TAFKAL80ETC concert", 10, 20);
+        Item item = new BackstageItem("Backstage passes to a TAFKAL80ETC concert", 10, 20);
         items = singletonList(item);
 
-        updateQuality();
+        updateQuality(1);
 
         assertEquals(22, item.getQuality());
     }
 
     @Test
     public void should_return_0_given_a_Backstage_Passes_item_its_sellIn_is_0_quality_is_20() throws Exception {
-        Item item = new NormalItem("Backstage passes to a TAFKAL80ETC concert", 0, 20);
+        Item item = new BackstageItem("Backstage passes to a TAFKAL80ETC concert", 0, 20);
         items = singletonList(item);
 
-        updateQuality();
+        updateQuality(1);
 
         assertEquals(0, item.getQuality());
     }
 
     @Test
     public void should_return_50_given_a_Backstage_Passes_item_its_sellIn_is_2_quality_is_60() throws Exception {
-        Item item = new NormalItem("Backstage passes to a TAFKAL80ETC concert", 2, 60);
+        Item item = new BackstageItem("Backstage passes to a TAFKAL80ETC concert", 2, 60);
         items = singletonList(item);
 
-        updateQuality();
+        updateQuality(1);
 
         assertEquals(60, item.getQuality());
     }
