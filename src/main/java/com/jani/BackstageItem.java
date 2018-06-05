@@ -1,10 +1,6 @@
 package com.jani;
 
-public class BackstageItem implements Item {
-
-    public String name;
-    public int sellIn;
-    public int quality;
+public class BackstageItem extends AbstractItem {
 
     public BackstageItem(String name, int sellIn, int quality) {
         this.setName(name);
@@ -12,33 +8,6 @@ public class BackstageItem implements Item {
         this.setQuality(quality);;
     }
 
-    /* Generated getter and setter code */
-    @Override
-    public String getName() {
-        return name;
-    }
-    @Override
-    public void setName(String name) {
-        this.name = name;
-    }
-    @Override
-    public int getSellIn() {
-        return sellIn;
-    }
-    @Override
-    public void setSellIn(int sellIn) {
-        this.sellIn = sellIn;
-    }
-    @Override
-    public int getQuality() {
-        return quality;
-    }
-    @Override
-    public void setQuality(int quality) {
-        this.quality = quality;
-    }
-
-    @Override
     public void updateQuality() {
         if (this.getQuality() < 50)
         {

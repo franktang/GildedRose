@@ -6,7 +6,7 @@ import java.util.List;
 
 public class GildedRose {
 
-	static List<Item> items = null;
+	static List<AbstractItem> items = null;
 
     /**
 	 * @param args
@@ -15,7 +15,7 @@ public class GildedRose {
 		
         System.out.println("OMGHAI!");
 		
-        items = new ArrayList<Item>();
+        items = new ArrayList<AbstractItem>();
         items.add(new NormalItem("+5 Dexterity Vest", 10, 20));
         items.add(new NormalItem("Aged Brie", 2, 0));
         items.add(new NormalItem("Elixir of the Mongoose", 5, 7));
@@ -28,7 +28,7 @@ public class GildedRose {
 
     public static void updateQuality(int indicator)
     {
-	    for (Item item : items){
+	    for (AbstractItem item : items){
 	        item.updateQuality();
         }
     }
